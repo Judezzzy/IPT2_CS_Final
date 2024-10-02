@@ -49,6 +49,86 @@
         .nav-links a:hover {
             text-decoration: underline;
         }
+        .back-button {
+            background-color: #3d52a0; 
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: auto; 
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2b3a7a; 
+        }
+
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 100px 20px;
+        }
+
+        .home {
+            position: relative;
+            height: 100vh;
+            background: url('your-new-background-url.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #7091E6;
+        }
+
+        .home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .home-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .home-text {
+            flex: 1;
+            text-align: left;
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        .home img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .home h1 {
+            font-size: 72px;
+            margin: 0;
+        }
+
+        .home p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
        
     </style>
 </head>
@@ -63,6 +143,16 @@
                 <a href="#contacts">Contacts</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#socials">Socials</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="home" class="section home">
+        <div class="home-content">
+            <button class="back-button" onclick="window.location.href='homepage.html'">Back to Homepage</button>
+            <div class="home-text">
+                <h1>Jude Policarpio</h1>
+                <p>Hi, My name is Jude Andrew Policarpio and this is my portfolio. I am a student of Tarlac State University. <br>My hobbies are playing video games, watching anime, reading manga, and sports. Feel free to navigate<br> my webpage to know more about me.</p>
             </div>
         </div>
     </div>
