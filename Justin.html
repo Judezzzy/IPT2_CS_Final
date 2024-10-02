@@ -137,8 +137,45 @@
       object-fit: cover;
       padding: 30px;
     }
+    .activities-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
 
+    .activity-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 30%;
+      height: auto;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
+    .activity-box img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .activity-box h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .activity-box p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+ 
 </style>
 </head>
 <body>
@@ -173,8 +210,25 @@
     </div>
     <img src="2.jpg" alt="About Image" class="about-image">
   </section>
+  <section id="activities" class="activities-section">
+    <div class="activity-box">
+      <img src="3.png" alt="Activity Image">
+      <h3> React Native </h3>
+      <p> I use react native for our capstone that's why i have a little knowledge about it </p>
+    </div>
+    <div class="activity-box">
+      <img src="4.png" alt="Activity Image">
+      <h3>JavaScript</h3>
+      <p> I also used JavaScript for capstone that's why i have a little knowledge about it </p>
+    </div>
+    <div class="activity-box">
+      <img src="5.png" alt="Activity Image">
+      <h3>Java</h3>
+      <p>This was our first year programming language that's why i have a little knowledge about it</p>
+    </div>
+  </section>
 
 
-
+  
 </body>
 </html>
