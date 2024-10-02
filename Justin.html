@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #333;
+      padding: 20px;
+    }
+
+    header {
+      padding: 15px;
+      position: relative;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #fff;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      border: 2px solid #b74b4b;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #b74b4b;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      font-size: 18px;
+      color: white;
+      margin: 0 20px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b74b4b;
+    }
+
+    nav a.active::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #b74b4b;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-left: 100px;
+    }
+
+    .profile-image {
+      width: 35%;
+      border-radius: 50px;
+      object-fit: cover;
+      padding: 30px;
+    }
+
+    .profile-description {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .profile-description h2 {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color:#fff;
+    }
+
+    .profile-description p {
+      font-size: 20px;
+      color: #333;
+      color:#fff;
+    }
+    .about-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .about-description {
+      width: 50%;
+      padding-right: 20px;
+      margin-left: 100px;
+    }
+    .about-description h2 {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color:#fff;
+    }
+    .about-description p {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color:#fff;
+    }
+
+    .about-image {
+      width: 30%;
+      border-radius: 50px;
+      object-fit: cover;
+      padding: 30px;
+    }
+    .activities-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .activity-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 30%;
+      height: auto;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .activity-box img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .activity-box h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .activity-box p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+ 
+</style>
+</head>
+<body>
+
+
+  <header>
+    <a href="index.html" class="back-button">← Back to Home</a> 
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#activities">Experience</a> 
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="profile-section">
+    <div class="profile">
+      <img src="1.jpg" alt="Your Photo" class="profile-image">
+      <div class="profile-description">
+        <h2>Hi, it's Justin Mart</h2>
+        <p>Hello!, I'm Justin Mart a student in Tarlac State University. 
+            My course is Bachelor of Science in Information Technology that specializes in Web and Mobile Application. 
+            I'm not really good at programming but i have little experience in mobile development since our capstone focuses on mobile development.  </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="about-description">
+      <h2>More about Me</h2>
+      <p>I am a player representing Tarlac State University, where I competed under the organization VULPHOX. I participated in Call of Duty: Mobile (COD
+        ) and we emerged as champions during the 2022-2023 Intramural Games. </p>
+    </div>
+    <img src="2.jpg" alt="About Image" class="about-image">
+  </section>
+  <section id="activities" class="activities-section">
+    <div class="activity-box">
+      <img src="3.png" alt="Activity Image">
+      <h3> React Native </h3>
+      <p> I use react native for our capstone that's why i have a little knowledge about it </p>
+    </div>
+    <div class="activity-box">
+      <img src="4.png" alt="Activity Image">
+      <h3>JavaScript</h3>
+      <p> I also used JavaScript for capstone that's why i have a little knowledge about it </p>
+    </div>
+    <div class="activity-box">
+      <img src="5.png" alt="Activity Image">
+      <h3>Java</h3>
+      <p>This was our first year programming language that's why i have a little knowledge about it</p>
+    </div>
+  </section>
+
+
+  
+</body>
+</html>
