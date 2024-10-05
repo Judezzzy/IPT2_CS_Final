@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+<style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dfde7f;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        /* Back Button Styles */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #555;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #777;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .about, .projects {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(167, 28, 28, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .projects img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .project {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+        }
+        .project h3 {
+            color: #333;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media(max-width: 768px) {
+            .project {
+                width: 45%;
+            }
+        }
+        @media(max-width: 480px) {
+            .project {
+                width: 100%;
+            }
+        }
+</style>
+</head>
+<body>
+    <header>
+        <button class="back-button" onclick="history.back()">← Back</button>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my personal portfolio</p>
+    </header>
+
+    <div class="container">
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I'm Yenoh Marc Nyl C. Cosme, a 4th year college student from Tarlac State University, College of Computer Science, pursuing a degree in Bachelor of Science in Information Technology specializing in Web and Mobile Application. I'm currently living in Barangay Bularit, Gerona, Tarlac.</p>
+        </section>
+
+        <section class="projects">
+            <h2>Informations</h2>
+            <div class="project">
+                <h3>Contacts</h3>
+                <p>Fb: Yenoh Clemente
+                    <br>
+                    Email: yenohcosme12@gmail.com
+                    <br>
+                    IG: Sauce
+                    <br>
+                    Phone: 09354346893
+                </p>
+            </div>
+            <div class="project">
+                <img src="profile.jpg" alt="Profile">
+                <h3>Skills</h3>
+                <p>Video editing
+                    <br>
+                    Mechanic
+                    <br>
+                    Creativity
+                </p>
+            </div>
+            <div class="project">
+                <h3>Education</h3>
+                <p>Elementary - Velasco Elementary School
+                    <br>
+                    High School - Corazon C. Aquino High School
+                </p>
+            </div>
+           
+        </section>
+    </div>
+    <footer class="footer">
+        <p>Thank You</p>
+    </footer>
+
+    
+</body>
+</html>
