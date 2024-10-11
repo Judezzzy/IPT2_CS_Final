@@ -4,7 +4,221 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Agency</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff009d, #f876c6);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 5em;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.5em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #services {
+      padding: 100px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 3.5em;
+      color: #333;
+      margin-bottom: 50px;
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      position: relative;
+      background-color: white;
+      padding: 30px;
+      margin: 20px;
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.5s ease;
+      cursor: pointer;
+    }
+
+    .service.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service h3 {
+      font-size: 1.8em;
+      color: #ff009d;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    .service:hover {
+      background-color: #ff98d8;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-content {
+      display: none; 
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .service-image {
+      display: none; 
+      width: 100%;
+      height: auto; 
+      margin-top: 20px;
+    }
+
+   
+    #main-content {
+      display: none; 
+   
+    
+      height: 100vh; 
+      background-color: #ff009d;
+      color: #ffffff;
+    }
+    
+    #main-content h2 {
+      font-size: 2.5em;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .service-main-image {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-width: 100%; 
+      height: auto; 
+      margin-bottom: 15px; 
+      border-radius: 5px; 
+      background-color: #ff009d;
+  }
+
+    #services1 { 
+      padding: 20px;
+      background-color: #ffffff; 
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+  #services1 h2 {
+    font-size: 3.5em;
+    color: #333;
+    margin-bottom: 50px;
+  }
+
+  .service1-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .service1 {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.5s ease;
+    cursor: pointer;
+  }
+
+  .service1.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .service1 h3 {
+    font-size: 1.8em;
+    color: #ff009d;
+    margin-bottom: 10px;
+  }
+
+  .service1 p {
+    font-size: 1.1em;
+    color: #666;
+  }
+
+  .service1:hover {
+    background-color: #ff98d8;
+    transform: scale(1.05);
+  }
+
+  #back-button1 {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background-color: #ffabdf;
+    transition: color 0.3s;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  #back-button1:hover {
+    color: #ff5ec1;
+  }
   
+</style>
 </head>
 <body>
   
