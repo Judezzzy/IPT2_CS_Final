@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Agency</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff009d, #f876c6);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 5em;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.5em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #services {
+      padding: 100px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 3.5em;
+      color: #333;
+      margin-bottom: 50px;
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .service {
+      position: relative;
+      background-color: white;
+      padding: 30px;
+      margin: 20px;
+      width: 30%;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.5s ease;
+      cursor: pointer;
+    }
+
+    .service.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service h3 {
+      font-size: 1.8em;
+      color: #ff009d;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    .service:hover {
+      background-color: #ff98d8;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-content {
+      display: none; 
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .service-image {
+      display: none; 
+      width: 100%;
+      height: auto; 
+      margin-top: 20px;
+    }
+
+   
+    #main-content {
+      display: none; 
+   
+    
+      height: 100vh; 
+      background-color: #ff009d;
+      color: #ffffff;
+    }
+    
+    #main-content h2 {
+      font-size: 2.5em;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .service-main-image {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-width: 100%; 
+      height: auto; 
+      margin-bottom: 15px; 
+      border-radius: 5px; 
+      background-color: #ff009d;
+  }
+
+    #services1 { 
+      padding: 20px;
+      background-color: #ffffff; 
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+  #services1 h2 {
+    font-size: 3.5em;
+    color: #333;
+    margin-bottom: 50px;
+  }
+
+  .service1-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .service1 {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.5s ease;
+    cursor: pointer;
+  }
+
+  .service1.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .service1 h3 {
+    font-size: 1.8em;
+    color: #ff009d;
+    margin-bottom: 10px;
+  }
+
+  .service1 p {
+    font-size: 1.1em;
+    color: #666;
+  }
+
+  .service1:hover {
+    background-color: #ff98d8;
+    transform: scale(1.05);
+  }
+
+  #back-button1 {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background-color: #ffabdf;
+    transition: color 0.3s;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  #back-button1:hover {
+    color: #ff5ec1;
+  }
+  
+</style>
+</head>
+<body>
+  
+  <header>
+    
+    <h1>Welcome to CHAD Digital</h1>
+    <p>Your Creative Partner</p>
+  </header>
+  <button id="back-button1" 
+  onclick="window.location.href='homepage.html';">
+Back
+</button>
+  
+  <section id="services">
+    <h2>Things I know</h2>
+    <div class="service-container">
+      <div class="service" data-target="service1">
+        <h3>Web Development</h3>
+        <p>Creating beautiful websites</p>
+        <div class="service-content" id="service1-content">
+          <p>We offer full-stack web development services, including front-end, back-end, and database management. Our team specializes in creating responsive and modern websites tailored to your business needs.</p>
+          <img src="download (2).jfif" alt="Web Development" class="service-image" id="service1-image">
+        </div>
+      </div>
+      <div class="service" data-target="service2">
+        <h3>Graphic Design</h3>
+        <p>Designs that stand out</p>
+        <div class="service-content" id="service2-content">
+          <p>Our graphic design team crafts visually stunning branding, logos, banners, and marketing materials to help your brand leave a lasting impression on your audience.</p>
+          <img src="graphic-design.jpg" alt="Graphic Design" class="service-image" id="service2-image">
+        </div>
+      </div>
+      <div class="service" data-target="service3">
+        <h3>Database Manager</h3>
+        <p>Efficient data handling</p>
+        <div class="service-content" id="service3-content">
+          <p>Our Database Management services ensure your data is organized, accessible, and secure. We specialize in designing, implementing, and maintaining databases tailored to your business needs.</p>
+          <img src="marketing.jpg" alt="Database Management" class="service-image" id="service3-image" style="display: none;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="main-content">
+    <button id="back-button" style=" margin-bottom: 20px; padding: 10px 20px; font-size: 1em; background-color: #ff92d5; color: rgb(0, 0, 0); border: none; border-radius: 5px; cursor: pointer; display: none;">
+      Back 
+    </button>
+    <h2 id="main-title">Service Title</h2>
+    <p id="main-description">Content goes here...</p>
+
+    <div id="service1-main" class="service-main" style="display: none;">
+        <p>In our Web Development service, we focus on creating responsive and modern websites. Our team ensures that your website is not only visually appealing but also functional and user-friendly.</p>
+        <img src="chad1.png" style=" height: 400px; width:600px; margin-left:630px"   alt="Web Development" class="service-main-image">
+      </div>
+    
+    <div id="service2-main" class="service-main" style="display: none;">
+        <p>Our Graphic Design service provides unique and captivating designs tailored to your brand. We work with you to understand your vision and bring it to life through our creative expertise.</p>
+        <img src="chad2.png"  style=" height: 400px; width:600px; margin-left:630px" alt="Graphic Design" class="service-main-image"> 
+      </div>
+    
+    <div id="service3-main" class="service-main" style="display: none;">
+       
+        <img src="chad3.png" style=" height: 400px; width:600px; margin-left:630px" alt="Database Management" class="service-main-image"> 
+      </div>
+
+    <section id="services1">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service" data-target="service1">
+                <h3>Web Development</h3>
+                <p>Creating beautiful websites</p>
+                <div class="service-content" id="service1-content">
+                    <p>We offer full-stack web development services, including front-end, back-end, and database management. Our team specializes in creating responsive and modern websites tailored to your business needs.</p>
+                </div>
+            </div>
+            <div class="service" data-target="service2">
+                <h3>Graphic Design</h3>
+                <p>Designs that stand out</p>
+                <div class="service-content" id="service2-content">
+                    <p>Our graphic design team crafts visually stunning branding, logos, banners, and marketing materials to help your brand leave a lasting impression on your audience.</p>
+                </div>
+            </div>
+            <div class="service" data-target="service3">
+                <h3>Database Manager</h3>
+                <p>Efficient data handling</p>
+                <div class="service-content" id="service3-content">
+                    <p>Our Database Management services ensure your data is organized, accessible, and secure. We specialize in designing, implementing, and maintaining databases tailored to your business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  
+
+
+  </section>
+
+  <script>
+   
+    document.querySelectorAll('.service').forEach((service, index) => {
+      setTimeout(() => {
+        service.classList.add('animated');
+      }, index * 200); 
+    });
+
+    const services = document.querySelectorAll('.service');
+    const mainContent = document.getElementById('main-content');
+    const mainTitle = document.getElementById('main-title');
+    const mainDescription = document.getElementById('main-description');
+    const serviceImages = document.querySelectorAll('.service-image'); 
+    const backButton = document.getElementById('back-button'); 
+
+    services.forEach(service => {
+      service.addEventListener('click', () => {
+        const serviceTitle = service.querySelector('h3').textContent;
+        const serviceContent = service.querySelector('.service-content p').textContent;
+
+        mainTitle.textContent = serviceTitle;
+        mainDescription.textContent = serviceContent;
+
+        const targetImageId = service.dataset.target + '-image';
+        const targetImage = document.getElementById(targetImageId);
+        serviceImages.forEach(img => img.style.display = 'none');
+        targetImage.style.display = 'block'; 
+
+        const serviceMains = document.querySelectorAll('.service-main');
+        serviceMains.forEach(main => main.style.display = 'none');
+
+        const targetMainId = service.dataset.target + '-main';
+        document.getElementById(targetMainId).style.display = 'block'; 
+
+        mainContent.style.display = 'block'; 
+        document.getElementById('services').style.display = 'none'; 
+        document.querySelector('header').style.display = 'none'; 
+
+      
+        backButton.style.display = 'block'; 
+      });
+    });
+
+   
+    backButton.addEventListener('click', () => {
+      mainContent.style.display = 'none'; 
+      document.getElementById('services').style.display = 'block'; 
+      document.querySelector('header').style.display = 'flex'; 
+
+    
+   
+    });
+  </script>
+</body>
+</html>
